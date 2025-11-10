@@ -1,0 +1,272 @@
+/* 全局重置 */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* 桌面端卡片最大宽度 */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.page.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+
+.quiz-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit-button {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  border-radius: 24px;
+  font-size: 18px;
+  height: 50px;
+}
+
+.message-display {
+  text-align: center;
+  margin-bottom: 62px;
+  min-height: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #1890ff;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+/* App.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+input, .ant-input {
+  font-size: 18px;
+  text-align: center;
+}
+
+.quiz-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit-button {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  border-radius: 24px;
+  font-size: 18px;
+  height: 50px;
+}
+
+.message-display {
+  text-align: center;
+  margin-bottom: 62px;
+  min-height: 24px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+/* 全局重置 */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 页面 fade-in/out 动画 */
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.page.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* 手机端 Quiz 页面 */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* 顶部标题和统计 */
+.quiz-header {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.quiz-stats {
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 输入框居中 */
+.quiz-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.quiz-input-wrapper .ant-input {
+  width: 80%;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* 提交结果显示 */
+.message-display {
+  text-align: center;
+  margin-bottom: 82px;
+  min-height: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #1890ff;
+}
+
+/* 底部按钮 */
+.submit-button {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  border-radius: 24px;
+  font-size: 18px;
+  height: 50px;
+}
+
+/* 桌面端卡片设计 */
+@media (min-width: 768px) {
+  .container {
+    align-items: flex-start;
+    padding: 40px 0;
+  }
+
+  .page {
+    margin: auto;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    min-height: 500px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 32px;
+    justify-content: flex-start;
+  }
+
+  .submit-button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 24px;
+    width: 100%;
+  }
+}
+input.ant-input.css-dev-only-do-not-override-ac2jek.ant-input-outlined {
+    background: #f0f0f0;
+    border-radius: 20px;
+    height: 50px;
+    width: 100%;
+}
